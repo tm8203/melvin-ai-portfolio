@@ -20,6 +20,3 @@ To reproduce this project:
 1. Open the `nst_project.ipynb` file in a Jupyter Notebook environment.
 2. Ensure you have the necessary dependencies installed (`TensorFlow`, `Matplotlib`, etc.).
 3. Run the notebook to see how the NST process works and generate the result on your machine.
-
-## GitHub Link
-[Explore the NST Project](https://github.com/tm8203/melvin-ai-portfolio/tree/main/melvin-ai-portfolio/NST)
