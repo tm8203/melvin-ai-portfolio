@@ -22,8 +22,4 @@ To reproduce this project:
 3. Run the notebook to see how the NST process works and generate the result on your machine.
 
 ## GitHub Link
-[Explore the NST Project](https://github.com/tm8203/melvin-ai-portfolio/tree/main/generative-ai/NST)
-
----
-
-Feel free to explore other generative AI techniques in the [Generative AI Section](https://github.com/tm8203/melvin-ai-portfolio/tree/main/generative-ai) of my portfolio!
+[Explore the NST Project](https://github.com/tm8203/melvin-ai-portfolio/tree/main/melvin-ai-portfolio/NST)
