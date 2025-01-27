@@ -27,10 +27,3 @@ To reproduce this project:
 
 ## Fun Fact
 Did you know that CNNs were inspired by the visual cortex of animals? They mimic how neurons respond to visual stimuli by detecting features like edges and textures!
-
-## GitHub Link
-[Explore the CNN Feature Detection Project](https://github.com/tm8203/melvin-ai-portfolio/tree/main/convolutional_neural_network)
-
----
-
-Feel free to explore other AI and deep learning projects in the [Generative AI Section](https://github.com/tm8203/melvin-ai-portfolio/tree/main/generative-ai) of my portfolio!
