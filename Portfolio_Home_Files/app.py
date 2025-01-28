@@ -152,7 +152,7 @@ elif page == "nst-filters":
 
     # Display the original photo
     st.subheader("Original Photo")
-    st.image("images/photo.jpg", caption="Original Photo", width=400)
+    st.image("Portfolio_Home_Files/photo.jpg", caption="Original Photo", width=400)
 
     # Display the Kandinsky painting
     st.subheader("Artistic Style Reference")
