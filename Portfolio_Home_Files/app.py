@@ -97,8 +97,8 @@ elif page == "creating-synthetic-data":
 
 elif page == "scalar-regression":
     st.title("Scalar Regression for Spend Forecast")
-    st.write("**Opportunity:** Predict future AWS resource usage trends to inform pricing agreements.")
-    st.write("**Solution:** Scalar regression model using historical time-series data.")
+    st.write("**Opportunity:** Predict future cloud resource usage trends to inform pricing agreements.")
+    st.write("**AI Solution:** I developed and trained a scalar regression model to use historical time-series data for analysis.")
     segment = st.selectbox("Select Customer Segment:", data["Customer_Segment"].unique())
     filtered_data = data[data["Customer_Segment"] == segment]
     st.write(f"### Spend Forecast for {segment} Customers")
@@ -113,8 +113,8 @@ elif page == "scalar-regression":
 
 elif page == "vae-anomaly-detection":
     st.title("Variational Autoencoder for Anomaly Detection")
-    st.write("**Opportunity:** Identify inefficiencies or unusual trends in resource usage.")
-    st.write("**Solution:** VAE to detect anomalies in AWS usage patterns, aiding cost optimization.")
+    st.write("**Opportunity:** Identify inefficiencies or unusual trends in resource usage to identify savings or optimizations.")
+    st.write("**AI Solution:** I developed and trained a VAE to detect anomalies in usage patterns, aiding cost optimization.")
     threshold_multiplier = st.slider("Set Threshold Multiplier (mean + (multiplier x standard deviation; lower = more sensitive/more flagged; higher = less sensitive/fewer flagged (extreme)):", 1.0, 3.0, 1.5)
     threshold = data["Monthly_Cloud_Spend"].mean() + threshold_multiplier * data["Monthly_Cloud_Spend"].std()
     anomalies = data[data["Monthly_Cloud_Spend"] > threshold]
@@ -123,8 +123,8 @@ elif page == "vae-anomaly-detection":
 
 elif page == "nlp-customer-insights":
     st.title("Natural Language Processing for Customer Insights")
-    st.write("**Opportunity:** Extract themes and sentiments from customer feedback.")
-    st.write("**Solution:** Text classification, sentiment analysis, and clustering.")
+    st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
+    st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
     user_feedbacks = st.text_area("Enter customer feedback (one per line):", height=150)
     if user_feedbacks:
         feedback_list = user_feedbacks.split("\n")
@@ -149,8 +149,8 @@ elif page == "nlp-customer-insights":
 
 elif page == "nst-filters":
     st.title("Create Filters with Neural Style Transfer (NST)")
-    st.write("**Overview:** This project demonstrates Neural Style Transfer (NST) by combining the content of a personal photo with the artistic style of a Kandinsky painting. We apply deep learning to create unique, visually engaging filters for images.")
-    st.write("**Solution:** Neural Style Transfer uses deep learning to blend the structure of one image with the artistic style of another.")
+    st.write("**Overview:** BYOF - Bring Your Own Filter! This project demonstrates Neural Style Transfer (NST) by combining the content of a personal photo with the artistic style of a Kandinsky painting. We apply deep learning to create unique, visually engaging filters for images.")
+    st.write("**AI Solution:** My NST model uses deep learning to blend the structure of one image with the artistic style of another.")
 
     # Display the original photo
     st.subheader("Original Photo")
@@ -171,7 +171,7 @@ elif page == "nst-filters":
 elif page == "cnn-feature-detection":
     st.title("Image Feature Detection with CNNs")
     st.write("**Overview:** This project demonstrates how Convolutional Neural Networks (CNNs) are used to detect features in images, such as edges, patterns, and textures; this can help with image classification or other vision tasks.")
-    st.write("**Solution:** A CNN is applied to a lion image to highlight its ability to detect features like edges and textures, so that so that these fundamental patterns can be used to build higher-level understanding for tasks like image classification, object detection, and automated decision-making in real-world AI applications.")
+    st.write("**AI Solution:** I applied my CNN model to a lion image to highlight its ability to detect features like edges and textures, so that so that these fundamental patterns can be used to build higher-level understanding for tasks like image classification, object detection, and automated decision-making in real-world AI applications.")
 
     # Display the original lion image
     st.subheader("Original Image")
@@ -194,7 +194,7 @@ elif page == "cnn-feature-detection":
 elif page == "sound-analysis":
     st.title("Analyze Sound with Spectrogram Insights")
     st.write("**Overview:** This project demonstrates how audio data can be transformed into visual spectrograms to reveal patterns in frequency and amplitude over time. Spectrograms allow us to analyze sound in a structured, visual format, enabling insights into the characteristics of different audio signals.")
-    st.write("**Solution:** Audio files are converted into spectrograms to highlight features such as pitch, energy levels, and temporal patterns. These visualizations provide the foundation for tasks like sound classification, speech recognition, and audio anomaly detection, enabling AI to understand and process audio data in real-world applications.")
+    st.write("**AI Solution:** My model converts audio files into spectrograms to highlight features such as pitch, energy levels, and temporal patterns. These visualizations provide the foundation for tasks like sound classification, speech recognition, and audio anomaly detection, enabling AI to understand and process audio data in real-world applications.")
 
     # Select a category
     st.subheader("Explore Audio Files by Category")
