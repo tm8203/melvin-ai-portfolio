@@ -25,7 +25,7 @@ st.markdown("""
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("Portfolio_Home_Files/synthetic_cloud_pricing_dataset.csv")
+    return pd.read_csv("Portfolio_Home_Files/synthetic_cloud_pricing_dataset.csv"")
 
 data = load_data()
 
@@ -67,7 +67,7 @@ if page == "about-me":
     # Display your photo
     col1, col2 = st.columns([1, 3])
     with col1:
-        st.image("Portfolio_Home_Files/photo.jpg", caption="Melvin Tejada", width=150)  # Adjust the width as needed
+        st.image("("Portfolio_Home_Files/photo.jpg"", caption="Melvin Tejada", width=150)  # Adjust the width as needed
     
     # Display your blurb in the second column
     with col2:
@@ -85,6 +85,7 @@ if page == "about-me":
             """, unsafe_allow_html=True)
     
         st.write("[LinkedIn](https://www.linkedin.com/in/melvin-tejada/) | [Resume](https://github.com/tm8203/melvin-ai-portfolio/blob/main/melvins-resume-2025.pdf)")
+
 
 
 elif page == "creating-synthetic-data":
