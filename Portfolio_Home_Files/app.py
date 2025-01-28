@@ -149,7 +149,7 @@ elif page == "nlp-customer-insights":
 
 elif page == "nst-filters":
     st.title("Create Filters with Neural Style Transfer (NST)")
-    st.write("**Overview:** BYOF - Bring Your Own Filter! This project demonstrates Neural Style Transfer (NST) by combining the content of a personal photo with the artistic style of a Kandinsky painting. We apply deep learning to create unique, visually engaging filters for images.")
+    st.write("**Overview:** BYOF - Bring Your Own Filter! This project demonstrates Neural Style Transfer (NST) by combining the content of a personal photo with the artistic style of a Kandinsky painting. I applied deep learning to create unique, visually engaging filters for images.")
     st.write("**AI Solution:** My NST model uses deep learning to blend the structure of one image with the artistic style of another.")
 
     # Display the original photo
