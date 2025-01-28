@@ -67,7 +67,7 @@ if page == "about-me":
     # Display your photo
     col1, col2 = st.columns([1, 3])
     with col1:
-        st.image("images/photo.jpg", caption="Melvin Tejada", width=150)  # Adjust the width as needed
+        st.image("Portfolio_Home_Files/photo.jpg", caption="Melvin Tejada", width=150)  # Adjust the width as needed
     
     # Display your blurb in the second column
     with col2:
