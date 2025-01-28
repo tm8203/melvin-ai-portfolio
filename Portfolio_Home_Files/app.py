@@ -112,7 +112,7 @@ elif page == "scalar-regression":
     st.pyplot(fig)
 
 elif page == "vae-anomaly-detection":
-    st.title("Variational Autoencoder for Anomaly Detection")
+    st.title("Variational Autoencoder (VAE) for Anomaly Detection")
     st.write("**Opportunity:** Identify inefficiencies or unusual trends in resource usage to identify savings or optimizations.")
     st.write("**AI Solution:** I developed and trained a VAE to detect anomalies in usage patterns, aiding cost optimization.")
     threshold_multiplier = st.slider("Set Threshold Multiplier (mean + (multiplier x standard deviation; lower = more sensitive/more flagged; higher = less sensitive/fewer flagged (extreme)):", 1.0, 3.0, 1.5)
@@ -122,7 +122,7 @@ elif page == "vae-anomaly-detection":
     st.dataframe(anomalies)
 
 elif page == "nlp-customer-insights":
-    st.title("Natural Language Processing for Customer Insights")
+    st.title("Natural Language Processing (NLP) for Customer Insights")
     st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
     st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
     user_feedbacks = st.text_area("Enter customer feedback (one per line):", height=150)
