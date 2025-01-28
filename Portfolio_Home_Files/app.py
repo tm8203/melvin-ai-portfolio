@@ -49,7 +49,7 @@ def navigate(page_name):
 
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
 st.sidebar.markdown("## Scenario:<br>Analyze cloud spend by customer segment using AI/ML/DL", unsafe_allow_html=True)
-st.sidebar.button("Create Synthetic Data", on_click=navigate, args=("creating-synthetic-data",))
+st.sidebar.button("First I Create Synthetic Data. Then I...", on_click=navigate, args=("creating-synthetic-data",))
 st.sidebar.button("[interactive] Use Scalar Regression to Forecast Spend", on_click=navigate, args=("scalar-regression",))
 st.sidebar.button("[interactive] Use a Variational Autoencoder (VAE) to Detect Anomalies", on_click=navigate, args=("vae-anomaly-detection",))
 st.sidebar.button("[interactive] Use Natural Language Processing (NLP) to Analyze Customer Insights", on_click=navigate, args=("nlp-customer-insights",))
