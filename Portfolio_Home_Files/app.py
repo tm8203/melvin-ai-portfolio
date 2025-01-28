@@ -73,15 +73,17 @@ if page == "about-me":
     with col2:
         st.markdown("""
             Welcome to my AI portfolio! I'm **Melvin Tejada**, an experienced professional with a passion for leading in technical product management, 
-            program management, and advanced analytics. I'm focused on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
+            program management, and advanced analytics. I focus on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
             
-            Explore this portfolio to see examples of my work and some of the technical skills I bring to the table.  
+            Explore this portfolio to see a small sample of my work with data and AI/ML/DL.  
             
+            Pro Tip: this portfolio pairs well with a sense of curiosity :)
             My portfolio is split into two sections:  
-            - The first offers a scenario with interactive tools.  
-            - The second highlights a few recent project examples.  
+            - The first section walks through analyzing cloud spend with a series of **interactive** AI models (~ one minute or less each)  
+            - The second offers some cool and also **interactive** models that create image filters, detect images, and analyze sound visuaully!
+            Have fun!
             
-            Feel free to connect via [LinkedIn](https://www.linkedin.com/in/melvin-tejada/) or email me at **tejada.melvin@gmail.com**. Have fun!
+            Feel free to connect via LinkedIn (link below) or email me at **tejada.melvin@gmail.com**. 
             """, unsafe_allow_html=True)
     
         st.write("[LinkedIn](https://www.linkedin.com/in/melvin-tejada/) | [Resume](https://github.com/tm8203/melvin-ai-portfolio/blob/main/melvins-resume-2025.pdf)")
