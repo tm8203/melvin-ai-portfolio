@@ -75,12 +75,12 @@ if page == "about-me":
             Welcome to my AI portfolio! I'm **Melvin Tejada**, an experienced professional with a passion for leading in technical product management, 
             program management, and advanced analytics. I focus on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
             
-            Explore this portfolio to see a small sample of my work with data and AI/ML/DL.  
+            Explore this portfolio to see a small sample of my work with data and AI/ML/DL.
+            **_Pro Tip: this portfolio pairs well with a sense of curiosity_** :)
             
-            _Pro Tip: this portfolio pairs well with a sense of curiosity_ :)
             My portfolio is split into two sections:  
             - The first section walks through analyzing cloud spend with a series of **interactive** AI models (~ one minute or less each)  
-            - The second offers some cool and also **interactive** models that create image filters, detect images, and analyze sound visuaully!
+            - The second offers some cool and also **interactive** models that create image filters, detect images, and analyze sound visuaully (also each a minute or less)!
             Have fun!
             
             Feel free to connect via LinkedIn (link below) or email me at **tejada.melvin@gmail.com**. 
@@ -92,7 +92,7 @@ if page == "about-me":
 
 elif page == "creating-synthetic-data":
     st.title("Creating Synthetic Data")
-    st.write("**Description:** I fully synthesized this dataset of 500 customer accounts using custom Python scripts. It generates realistic cloud data simulating usage patterns, including forecasts, service usage, and satisfaction metrics (data sample below).")
+    st.write("**Description:** To simulate a real business scenario of analyzing pricing and spend on cloud services, I fully synthesized this dataset of 500 customer accounts using custom Python scripts. It generates realistic cloud data simulating usage patterns, including forecasts, service usage, and satisfaction metrics (data sample below).")
     st.dataframe(data.head(10))
 
 elif page == "scalar-regression":
