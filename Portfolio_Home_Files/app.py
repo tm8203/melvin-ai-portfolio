@@ -173,7 +173,7 @@ elif page == "cnn-feature-detection":
 
     # Display the original lion image
     st.subheader("Original Image")
-    st.image("images/lion.jpg", caption="Original Lion Image", width=400)
+    st.image("CNN/lion.jpg", caption="Original Lion Image", width=400)
 
     # Display the feature maps (Conv2D output)
     st.subheader("Feature Maps from Convolutional Layers")
