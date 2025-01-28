@@ -71,13 +71,20 @@ if page == "about-me":
     
     # Display your blurb in the second column
     with col2:
-        st.write("""
-        Welcome to my AI portfolio! I'm Melvin Tejada, an experienced professional with a passion for leading in technical product management, 
-        program management, and advanced analytics. I'm focused on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes. 
-        Explore this portfolio to see examples of my work and some of the technical skills I bring to the table. <br> My portfolio is split in two sections: the first offers a scenario, with interactive tools, while the second section highlights a few recent project examples. <br> Feel free to connect via LinkedIn or email at tejada.melvin@gmail.com. Have fun!
-        """)
+        st.markdown("""
+            Welcome to my AI portfolio! I'm **Melvin Tejada**, an experienced professional with a passion for leading in technical product management, 
+            program management, and advanced analytics. I'm focused on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
+            
+            Explore this portfolio to see examples of my work and some of the technical skills I bring to the table.  
+            
+            My portfolio is split into two sections:  
+            - The first offers a scenario with interactive tools.  
+            - The second highlights a few recent project examples.  
+            
+            Feel free to connect via [LinkedIn](https://www.linkedin.com/in/melvin-tejada/) or email me at **tejada.melvin@gmail.com**. Have fun!
+            """, unsafe_allow_html=True)
     
-    st.write("[LinkedIn](https://www.linkedin.com/in/melvin-tejada/) | [Resume](https://github.com/tm8203/melvin-ai-portfolio/blob/main/melvins-resume-2025.pdf)")
+        st.write("[LinkedIn](https://www.linkedin.com/in/melvin-tejada/) | [Resume](https://github.com/tm8203/melvin-ai-portfolio/blob/main/melvins-resume-2025.pdf)")
 
 
 elif page == "creating-synthetic-data":
