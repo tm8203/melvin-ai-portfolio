@@ -25,7 +25,7 @@ st.markdown("""
 # Load dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("synthetic_cloud_pricing_dataset.csv")
+    return pd.read_csv("Portfolio_Home_Files/synthetic_cloud_pricing_dataset.csv")
 
 data = load_data()
 
