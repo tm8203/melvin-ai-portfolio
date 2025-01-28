@@ -76,6 +76,7 @@ if page == "about-me":
             program management, and advanced analytics. I focus on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
             
             Explore this portfolio to see a small sample of my work with data and AI/ML/DL.
+            
             **_Pro Tip: this portfolio pairs well with a sense of curiosity_** :)
             
             My portfolio is split into two sections:  
