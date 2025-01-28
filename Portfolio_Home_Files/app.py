@@ -156,11 +156,11 @@ elif page == "nst-filters":
 
     # Display the Kandinsky painting
     st.subheader("Artistic Style Reference")
-    st.image("images/vii.jpg", caption="Kandinsky Painting", width=400)
+    st.image("NST/vii.jpg", caption="Kandinsky Painting", width=400)
 
     # Display the result
     st.subheader("Resulting Image with Neural Style Transfer")
-    st.image("images/result.png", caption="Styled Image", width=400)
+    st.image("NST/result.png", caption="Styled Image", width=400)
 
     # Add a link to GitHub for the code
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/NST)")
