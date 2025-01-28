@@ -178,12 +178,12 @@ elif page == "cnn-feature-detection":
     st.image("CNN/lion.jpg", caption="Original Lion Image", width=400)
 
     # Display the feature maps (Conv2D output)
-    st.subheader("Feature Maps from Convolutional Layers")
+    st.subheader("Feature Maps from Convolutional Layers (represent extracted spatial features)")
     st.image("CNN/conv2d_18.png", caption="Conv2D Layer 18", use_container_width=True)
     st.image("CNN/conv2d_19.png", caption="Conv2D Layer 19", use_container_width=True)
 
     # Display the max pooling output
-    st.subheader("Feature Maps after Max Pooling Layers")
+    st.subheader("Feature Maps after Max Pooling Layers (summarize the most prominent features) ")
     st.image("CNN/max_pooling2d_18.png", caption="Max Pooling Layer 18", use_container_width=True)
     st.image("CNN/max_pooling2d_19.png", caption="Max Pooling Layer 19", use_container_width=True)
 
