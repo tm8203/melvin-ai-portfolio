@@ -56,7 +56,7 @@ st.sidebar.button("[**interactive**] Use Natural Language Processing (NLP) to An
 st.sidebar.markdown("## More Fun Generative AI and Deep Learning Samples")
 st.sidebar.button("Create Your Own Picture Filter with Neural Style Transfer (NST)", on_click=navigate, args=("nst-filters",))
 st.sidebar.button("Detect Image Features with a Convolutional Neural Network (CNN)", on_click=navigate, args=("cnn-feature-detection",))
-st.sidebar.button("[**Interactive**] Analyze Sound with Spectrogram Insights", on_click=navigate, args=("sound-analysis",))
+st.sidebar.button("[**interactive**] Analyze Sound with Spectrogram Insights", on_click=navigate, args=("sound-analysis",))
 
 # Display relevant section
 page = st.session_state.page
