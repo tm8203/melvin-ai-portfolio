@@ -75,6 +75,7 @@ def navigate(page_name):
 
 
 
+
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
 st.sidebar.markdown("## Scenario:<br>Analyze cloud spend by customer segment using AI/ML/DL", unsafe_allow_html=True)
 st.sidebar.button("First I Create Synthetic Data. Then...", on_click=navigate, args=("creating-synthetic-data",))
