@@ -43,11 +43,16 @@ st.markdown("""
     <style>
         @media (max-width: 768px) {
             [data-testid="stSidebar"] {
-                display: none !important;  /* Hide sidebar on mobile */
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            [data-testid="collapsedControl"] {
+                display: block !important;
             }
         }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Load dataset
