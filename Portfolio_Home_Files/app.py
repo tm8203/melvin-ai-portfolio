@@ -289,7 +289,8 @@ elif page == "sound-analysis":
 
 # Ensure sidebar collapse logic applies correctly
 if st.session_state.get("force_refresh", False):
-    st.session_state.force_refresh = False  # ✅ Reset refresh flag
-    st.rerun()  # ✅ Safe place to trigger refresh
+    st.session_state.force_refresh = False  # Reset flag
+    st.rerun()  # Force reload after sidebar interaction
+
 
 
