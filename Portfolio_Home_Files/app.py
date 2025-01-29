@@ -23,8 +23,10 @@ if "sidebar_state" not in st.session_state:
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state=st.session_state.sidebar_state  # Uses session state for initial load
+    initial_sidebar_state="collapsed" if st.session_state.first_load else st.session_state.sidebar_state
 )
+st.session_state.first_load = False  # Reset after first load
+
 
 # Inject custom CSS
 st.markdown("""
