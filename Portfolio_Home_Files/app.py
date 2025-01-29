@@ -21,6 +21,18 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Inject JavaScript to collapse sidebar on button click
+st.markdown("""
+    <script>
+        function closeSidebar() {
+            var sidebar = window.parent.document.querySelector('[data-testid="stSidebar"]');
+            if (sidebar) {
+                sidebar.style.display = "none";  // Hides the sidebar after selection
+                setTimeout(() => { sidebar.style.display = "block"; }, 10);  // Ensures it can reopen later
+            }
+        }
+    </script>
+""", unsafe_allow_html=True)
 
 # Load dataset
 @st.cache_data
