@@ -39,6 +39,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+        @media (max-width: 768px) {
+            [data-testid="stSidebar"] {
+                display: none !important;  /* Hide sidebar on mobile */
+            }
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Load dataset
 @st.cache_data
 def load_data():
