@@ -276,7 +276,8 @@ elif page == "sound-analysis":
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/Sound)")
 
 # Ensure sidebar collapse logic applies correctly
-if st.session_state.get("needs_rerun", False):
-    st.session_state.needs_rerun = False  # Reset flag to prevent loops
-    st.rerun()  # Safe place to trigger refresh
+if st.session_state.get("force_refresh", False):
+    st.session_state.force_refresh = False  # ✅ Reset refresh flag
+    st.rerun()  # ✅ Safe place to trigger refresh
+
 
