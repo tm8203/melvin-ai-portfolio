@@ -43,15 +43,10 @@ st.sidebar.title("Melvin Tejada's AI Portfolio")
 if "page" not in st.session_state:
     st.session_state.page = "about-me"
 
-# def navigate(page_name):
-    # st.session_state.page = page_name
-    # st.query_params.update({"page": page_name})  # Update URL params to force a refresh and collapse sidebar
-
 def navigate(page_name):
     if st.session_state.page != page_name:
         st.session_state.page = page_name
-        st.query_params.clear()  # Clears query params to trigger a soft reload
-        st.rerun()  # Forces a re-run of the script, which collapses the sidebar
+        st.query_params.update({"page": page_name})  # Update query params to force a refresh
 
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
 st.sidebar.markdown("## Scenario:<br>Analyze cloud spend by customer segment using AI/ML/DL", unsafe_allow_html=True)
