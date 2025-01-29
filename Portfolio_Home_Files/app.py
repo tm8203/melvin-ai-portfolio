@@ -25,6 +25,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed" if st.session_state.first_load else st.session_state.sidebar_state
 )
+
 st.session_state.first_load = False  # Reset after first load
 
 
