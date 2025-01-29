@@ -10,8 +10,8 @@ import os
     #st.session_state.sidebar_state = "collapsed"  # Default state
 
 if "sidebar_state" not in st.session_state:
-    st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
-    st.session_state.first_load = True  # Track the first load state
+    st.session_state.sidebar_state = "collapsed"  # Ensures first load is collapsed
+    st.session_state.first_load = True  # Tracks first load state
 
 # Page configuration
 #st.set_page_config(
