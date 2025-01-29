@@ -53,10 +53,15 @@ if "page" not in st.session_state:
         #st.session_state.page = page_name
         #st.query_params.update({"page": page_name})  # Update query params to force a refresh
 
+#def navigate(page_name):
+    #st.session_state.page = page_name
+    #st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on selection
+    #st.rerun()  # Force a soft reload
+
 def navigate(page_name):
     st.session_state.page = page_name
     st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on selection
-    st.rerun()  # Force a soft reload
+    st.session_state.needs_rerun = True  # Set flag instead of calling st.rerun()
 
 
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
@@ -251,3 +256,8 @@ elif page == "sound-analysis":
 
     # Add a link to GitHub for the code
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/Sound)")
+
+if st.session_state.get("needs_rerun", False):
+    st.session_state.needs_rerun = False  # Reset flag
+    st.rerun()  # Safely call st.rerun() outside of callback
+
