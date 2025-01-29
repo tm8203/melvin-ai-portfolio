@@ -7,13 +7,13 @@ import os
 
 # Initialize sidebar state
 if "sidebar_state" not in st.session_state:
-    st.session_state.sidebar_state = "expanded"  # Default state
+    st.session_state.sidebar_state = "collapsed"  # Default state
 
 # Page configuration
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state="collapsed"  # Force sidebar to start collapsed
+    initial_sidebar_state=st.session_state.sidebar_state  # Use session state to track sidebar behavior
 )
 
 # Inject custom CSS
@@ -257,7 +257,8 @@ elif page == "sound-analysis":
     # Add a link to GitHub for the code
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/Sound)")
 
+# Ensure sidebar collapse logic applies correctly
 if st.session_state.get("needs_rerun", False):
     st.session_state.needs_rerun = False  # Reset flag
-    st.rerun()  # Safely call st.rerun() outside of callback
+    st.rerun()  # Safely trigger a rerun outside of button callback
 
