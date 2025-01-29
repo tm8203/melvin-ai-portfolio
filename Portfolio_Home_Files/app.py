@@ -39,22 +39,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
-        @media (max-width: 768px) {
-            [data-testid="stSidebar"] {
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-            }
-            [data-testid="collapsedControl"] {
-                display: block !important;
-            }
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
-
 # Load dataset
 @st.cache_data
 def load_data():
