@@ -10,7 +10,7 @@ import os
     #st.session_state.sidebar_state = "collapsed"  # Default state
     
 if "sidebar_state" not in st.session_state:
-    st.session_state.sidebar_state = "expanded" 
+    st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
 
 # Page configuration
 #st.set_page_config(
@@ -22,8 +22,22 @@ if "sidebar_state" not in st.session_state:
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state=st.session_state.get("sidebar_state", "expanded")  # Dynamic state
+    initial_sidebar_state=st.session_state.sidebar_state  # Uses session state for initial load
 )
+
+st.markdown("""
+    <script>
+        function collapseSidebar() {
+            var sidebar = window.parent.document.querySelector('[data-testid="stSidebar"]');
+            if (sidebar) {
+                sidebar.style.display = "none";  // Force sidebar to collapse
+                setTimeout(() => { sidebar.style.display = "block"; }, 10);  // Ensures it remains interactive
+            }
+        }
+        collapseSidebar();  // Run on page load
+    </script>
+""", unsafe_allow_html=True)
+
 
 # Inject custom CSS
 st.markdown("""
