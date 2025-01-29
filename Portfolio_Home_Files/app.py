@@ -67,8 +67,10 @@ if "page" not in st.session_state:
 def navigate(page_name):
     if st.session_state.page != page_name:
         st.session_state.page = page_name
-        st.session_state.sidebar_state = "collapsed"  # Force sidebar to collapse
-        st.session_state.force_refresh = True  # Set flag for refresh
+        st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on button click
+        st.session_state.allow_sidebar_open = True  # Allow manual opening again
+        st.session_state.force_refresh = True  # Force refresh to apply changes
+
 
 
 
