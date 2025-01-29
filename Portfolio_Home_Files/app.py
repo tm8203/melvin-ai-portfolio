@@ -22,7 +22,7 @@ if "sidebar_state" not in st.session_state:
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state="collapsed" if "sidebar_state" not in st.session_state else st.session_state.sidebar_state
+    initial_sidebar_state=st.session_state.get("sidebar_state", "expanded")  # Dynamic state
 )
 
 # Inject custom CSS
