@@ -8,9 +8,10 @@ import os
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
     #st.session_state.sidebar_state = "collapsed"  # Default state
-    
+
 if "sidebar_state" not in st.session_state:
     st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
+    st.session_state.first_load = True  # Track the first load state
 
 # Page configuration
 #st.set_page_config(
@@ -24,20 +25,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state=st.session_state.sidebar_state  # Uses session state for initial load
 )
-
-st.markdown("""
-    <script>
-        function collapseSidebar() {
-            var sidebar = window.parent.document.querySelector('[data-testid="stSidebar"]');
-            if (sidebar) {
-                sidebar.style.display = "none";  // Force sidebar to collapse
-                setTimeout(() => { sidebar.style.display = "block"; }, 10);  // Ensures it remains interactive
-            }
-        }
-        collapseSidebar();  // Run on page load
-    </script>
-""", unsafe_allow_html=True)
-
 
 # Inject custom CSS
 st.markdown("""
