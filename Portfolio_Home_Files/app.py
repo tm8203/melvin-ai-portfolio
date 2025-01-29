@@ -10,8 +10,7 @@ import os
     #st.session_state.sidebar_state = "collapsed"  # Default state
     
 if "sidebar_state" not in st.session_state:
-    st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
-    st.session_state.page = "about-me"  # Default page
+    st.session_state.sidebar_state = "collapsed"  #Start collapsed only on first load
 
 # Page configuration
 #st.set_page_config(
@@ -23,7 +22,7 @@ if "sidebar_state" not in st.session_state:
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state=st.session_state.sidebar_state
+    initial_sidebar_state=st.session_state.sidebar_state  # Uses saved state instead of resetting
 )
 
 # Inject custom CSS
@@ -69,9 +68,11 @@ if "page" not in st.session_state:
     #st.rerun()  # Force a soft reload
 
 def navigate(page_name):
-    st.session_state.page = page_name
-    st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on selection
-    st.session_state.needs_rerun = True  # Set flag instead of calling st.rerun()
+    if st.session_state.page != page_name:
+        st.session_state.page = page_name
+        st.session_state.sidebar_state = "collapsed"  # Collapse sidebar after button click
+        st.session_state.needs_rerun = True  # Use flag instead of st.rerun()
+
 
 
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
@@ -269,6 +270,6 @@ elif page == "sound-analysis":
 
 # Ensure sidebar collapse logic applies correctly
 if st.session_state.get("needs_rerun", False):
-    st.session_state.needs_rerun = False  # Reset flag
-    st.rerun()  # Safely trigger a rerun outside of button callback
+    st.session_state.needs_rerun = False  # Reset flag to prevent loops
+    st.rerun()  # Safe place to trigger refresh
 
