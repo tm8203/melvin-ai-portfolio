@@ -12,7 +12,7 @@ if "sidebar_state" not in st.session_state:
 # Page configuration
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
-    layout="wide"
+    layout="wide",
     initial_sidebar_state=st.session_state.get("sidebar_state", "expanded")  # Dynamic sidebar state
 )
 
