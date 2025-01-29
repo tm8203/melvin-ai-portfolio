@@ -5,10 +5,15 @@ import altair as alt
 from textblob import TextBlob
 import os
 
+# Initialize sidebar state
+if "sidebar_state" not in st.session_state:
+    st.session_state.sidebar_state = "expanded"  # Default state
+
 # Page configuration
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide"
+    initial_sidebar_state=st.session_state.get("sidebar_state", "expanded")  # Dynamic sidebar state
 )
 
 # Inject custom CSS
@@ -43,10 +48,16 @@ st.sidebar.title("Melvin Tejada's AI Portfolio")
 if "page" not in st.session_state:
     st.session_state.page = "about-me"
 
+#def navigate(page_name):
+    #if st.session_state.page != page_name:
+        #st.session_state.page = page_name
+        #st.query_params.update({"page": page_name})  # Update query params to force a refresh
+
 def navigate(page_name):
-    if st.session_state.page != page_name:
-        st.session_state.page = page_name
-        st.query_params.update({"page": page_name})  # Update query params to force a refresh
+    st.session_state.page = page_name
+    st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on selection
+    st.rerun()  # Force a soft reload
+
 
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
 st.sidebar.markdown("## Scenario:<br>Analyze cloud spend by customer segment using AI/ML/DL", unsafe_allow_html=True)
