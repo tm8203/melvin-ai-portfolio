@@ -46,7 +46,7 @@ if "page" not in st.session_state:
 
 def navigate(page_name):
     st.session_state.page = page_name
-    st.rerun()  # Forces Streamlit to refresh, ensuring sidebar collapse
+    st.experimental_set_query_params(page=page_name)  # This refreshes the page, collapsing the sidebar
 
 st.sidebar.button("About Me", on_click=navigate, args=("about-me",))
 st.sidebar.markdown("## Scenario:<br>Analyze cloud spend by customer segment using AI/ML/DL", unsafe_allow_html=True)
