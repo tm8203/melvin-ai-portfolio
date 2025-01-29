@@ -6,14 +6,24 @@ from textblob import TextBlob
 import os
 
 # Initialize sidebar state
+#if "sidebar_state" not in st.session_state:
+    #st.session_state.sidebar_state = "collapsed"  # Default state
+    
 if "sidebar_state" not in st.session_state:
-    st.session_state.sidebar_state = "collapsed"  # Default state
+    st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
+    st.session_state.page = "about-me"  # Default page
 
 # Page configuration
+#st.set_page_config(
+    #page_title="Melvin Tejada's AI Portfolio",
+    #layout="wide",
+    #initial_sidebar_state=st.session_state.sidebar_state  # Use session state to track sidebar behavior
+)
+
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state=st.session_state.sidebar_state  # Use session state to track sidebar behavior
+    initial_sidebar_state=st.session_state.sidebar_state
 )
 
 # Inject custom CSS
