@@ -62,16 +62,16 @@ if "page" not in st.session_state:
         #st.session_state.page = page_name
         #st.query_params.update({"page": page_name})  # Update query params to force a refresh
 
-#def navigate(page_name):
-    #st.session_state.page = page_name
-    #st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on selection
-    #st.rerun()  # Force a soft reload
-
 def navigate(page_name):
-    if st.session_state.page != page_name:
-        st.session_state.page = page_name
-        st.session_state.sidebar_state = "collapsed"  # Collapse sidebar after button click
-        st.session_state.needs_rerun = True  # Use flag instead of st.rerun()
+    st.session_state.page = page_name
+    st.session_state.sidebar_state = "collapsed"  # Collapse sidebar on selection
+    st.rerun()  # Force a soft reload
+
+#def navigate(page_name):
+    #if st.session_state.page != page_name:
+        #st.session_state.page = page_name
+        #st.session_state.sidebar_state = "collapsed"  # Collapse sidebar after button click
+        #st.session_state.needs_rerun = True  # Use flag instead of st.rerun()
 
 
 
