@@ -10,8 +10,9 @@ import os
     #st.session_state.sidebar_state = "collapsed"  # Default state
 
 if "sidebar_state" not in st.session_state:
-    st.session_state.sidebar_state = "collapsed"  # Ensures first load is collapsed
-    st.session_state.first_load = True  # Tracks first load state
+    st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
+    st.session_state.allow_sidebar_open = True  # Track manual sidebar opening
+
 
 # Page configuration
 #st.set_page_config(
@@ -23,11 +24,8 @@ if "sidebar_state" not in st.session_state:
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state="collapsed" if st.session_state.first_load else st.session_state.sidebar_state
+    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
-
-st.session_state.first_load = False  # Reset after first load
-
 
 # Inject custom CSS
 st.markdown("""
