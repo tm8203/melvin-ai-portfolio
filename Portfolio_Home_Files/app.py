@@ -179,6 +179,17 @@ elif page == "nlp-customer-insights":
     )
     st.altair_chart(bar_chart, use_container_width=True)
 
+    # Inject CSS to hide the "Press Ctrl+Enter to apply" hint
+st.markdown("""
+    <style>
+        /* Hide Streamlit's Ctrl+Enter message */
+        .stTextArea div[data-testid="stMarkdownContainer"] {
+            display: none !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+    
     # User Input for Sentiment Analysis
     user_feedbacks = st.text_area("Enter customer feedback, then click the **Analyze Sentiment** button for results:", height=150)
 
