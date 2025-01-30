@@ -35,23 +35,42 @@ st.markdown("""
             text-align: left !important;
         }
 
-        /* Add a floating 'Menu' label near the sidebar toggle */
+        /* Floating menu label */
         .menu-hint {
             position: fixed;
-            top: 12px;
-            left: 20px;
+            top: 15px;
+            left: 15px;
             font-size: 14px;
             font-weight: bold;
-            color: #555;
-            background-color: #f0f0f0;
-            padding: 4px 8px;
-            border-radius: 4px;
+            color: white;
+            background-color: #FF4B4B; /* Streamlit red */
+            padding: 5px 10px;
+            border-radius: 5px;
             z-index: 999;
             cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        /* Hide label when sidebar is open */
+        [data-testid="stSidebar"][aria-expanded="true"] ~ .menu-hint {
+            opacity: 0;
+            pointer-events: none;
         }
     </style>
-    <div class="menu-hint">☰ Menu</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var hint = document.createElement("div");
+            hint.innerText = "☰ Menu";
+            hint.className = "menu-hint";
+            hint.onclick = function() {
+                document.querySelector('button[kind="icon"]').click();
+            };
+            document.body.appendChild(hint);
+        });
+    </script>
 """, unsafe_allow_html=True)
+
 
 # Load dataset
 @st.cache_data
