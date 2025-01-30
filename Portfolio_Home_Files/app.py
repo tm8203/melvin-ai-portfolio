@@ -164,16 +164,6 @@ elif page == "nlp-customer-insights":
     st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
     st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
 
-    # Inject CSS to hide the "Press Ctrl+Enter to apply" hint
-    st.markdown("""
-        <style>
-            /* Hide Streamlit's Ctrl+Enter message */
-            .stTextArea div[data-testid="stMarkdownContainer"] {
-                display: none !important;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
     # Always Visible: Feedback Clustering Visualization
     st.write("### Feedback Clustering")
     chart_data = pd.DataFrame({
@@ -189,8 +179,21 @@ elif page == "nlp-customer-insights":
     )
     st.altair_chart(bar_chart, use_container_width=True)
 
+    # Add the guidance text back
+    st.write("Enter customer feedback, then click the **Analyze Sentiment** button for results:")
+
+    # Inject CSS to hide the "Press Ctrl+Enter to apply" hint
+    st.markdown("""
+        <style>
+            /* Hide Streamlit's Ctrl+Enter message */
+            .stTextArea div[data-testid="stMarkdownContainer"] {
+                display: none !important;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
     # User Input for Sentiment Analysis
-    user_feedbacks = st.text_area("Enter customer feedback, then click the **Analyze Sentiment** button for results:", height=150)
+    user_feedbacks = st.text_area("", height=150)
 
     # Process sentiment analysis only when button is clicked
     if st.button("Analyze Sentiment"):
@@ -204,6 +207,7 @@ elif page == "nlp-customer-insights":
             st.dataframe(results_df)
         else:
             st.warning("Please enter some text before clicking 'Analyze Sentiment'.")
+
 
 
 
