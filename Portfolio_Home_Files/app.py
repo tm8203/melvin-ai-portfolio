@@ -112,7 +112,7 @@ if page == "about-me":
             Welcome to my AI portfolio! I'm **Melvin Tejada**, an experienced professional with a passion for leading in technical product management, 
             program management, and advanced analytics. I focus on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
             
-            Explore this portfolio to see a small sample of my work with data and AI/ML/DL.
+            Explore this portfolio (starting with the > symbol in the upper left corner) to see a small sample of my work with data and AI/ML/DL.
             
             **_Pro Tip: this portfolio pairs well with a sense of curiosity_** :)
             
