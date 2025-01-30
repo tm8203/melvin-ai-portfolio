@@ -164,15 +164,34 @@ elif page == "nlp-customer-insights":
     st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
     st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
     
+    # Text input area
     user_feedbacks = st.text_area("Enter customer feedback (one per line):", height=150)
 
-if st.button("Analyze Sentiment"):  # New Submit Button
-    if user_feedbacks:
-        feedback_list = user_feedbacks.split("\n")
-        results = [{"Feedback": feedback, "Sentiment": analyze_sentiment(feedback)} for feedback in feedback_list if feedback.strip()]
-        results_df = pd.DataFrame(results)
-        st.write("### Sentiment Analysis Results")
-        st.dataframe(results_df)
+    # Process input when button is clicked
+    if st.button("Analyze Sentiment"):
+        if user_feedbacks.strip():  # Ensure input is not empty
+            feedback_list = user_feedbacks.split("\n")
+            results = [{"Feedback": feedback, "Sentiment": analyze_sentiment(feedback)} for feedback in feedback_list if feedback.strip()]
+            results_df = pd.DataFrame(results)
+            st.write("### Sentiment Analysis Results")
+            st.dataframe(results_df)
+
+            # Feedback clustering visualization
+            st.write("### Feedback Clustering")
+            chart_data = pd.DataFrame({
+                'Topic': ['Pricing', 'Usability', 'Support'],
+                'Frequency': [120, 90, 60]
+            })
+            bar_chart = alt.Chart(chart_data).mark_bar().encode(
+                x='Frequency',
+                y=alt.Y('Topic', sort='-x'),
+                color='Topic'
+            ).properties(
+                title="Feedback Clustering by Topic"
+            )
+            st.altair_chart(bar_chart, use_container_width=True)
+        else:
+            st.warning("Please enter some text before clicking 'Analyze Sentiment'.")
 
     #this version uses the default ctrl+enter to interact with the module creating a poor mobile user experience
     #if user_feedbacks:
@@ -181,21 +200,7 @@ if st.button("Analyze Sentiment"):  # New Submit Button
         #results_df = pd.DataFrame(results)
         #st.write("### Sentiment Analysis Results")
         #st.dataframe(results_df)
-    
-        # Add horizontal bar graph
-    st.write("### Feedback Clustering")
-    chart_data = pd.DataFrame({
-        'Topic': ['Pricing', 'Usability', 'Support'],
-        'Frequency': [120, 90, 60]
-    })
-    bar_chart = alt.Chart(chart_data).mark_bar().encode(
-        x='Frequency',
-        y=alt.Y('Topic', sort='-x'),
-        color='Topic'
-    ).properties(
-        title="Feedback Clustering by Topic"
-    )
-    st.altair_chart(bar_chart, use_container_width=True)
+
 
 elif page == "nst-filters":
     st.title("Create Filters with Neural Style Transfer (NST)")
