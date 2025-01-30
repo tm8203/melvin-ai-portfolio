@@ -130,7 +130,7 @@ if page == "about-me":
 
 elif page == "creating-synthetic-data":
     st.title("Creating Synthetic Data")
-    st.write("**Description:** To simulate a real business scenario of analyzing pricing and spend on cloud services, I fully synthesized this dataset of 500 customer accounts using custom Python scripts. The dataset generates realistic cloud data simulating usage patterns, service usage, and satisfaction metrics (data sample below). The following next three modules further develop this pricing scenario, to include spend forecasts, detecting anomalies in the data, and analyzing customer feedback with a Natural Language Processing (NLP) model.")
+    st.write("**Description:** To simulate a real business scenario of analyzing pricing and spend on cloud services, I fully synthesized this dataset of 500 customer accounts using custom Python scripts. The dataset generates realistic cloud data simulating usage patterns, service usage, and satisfaction metrics (data sample below). The following three modules further develop this pricing scenario, to include spend forecasts, detecting anomalies in the data, and analyzing customer feedback with a Natural Language Processing (NLP) model.")
     st.dataframe(data.head(10))
 
 elif page == "scalar-regression":
