@@ -34,7 +34,23 @@ st.markdown("""
         .stButton button {
             text-align: left !important;
         }
+
+        /* Add a floating 'Menu' label near the sidebar toggle */
+        .menu-hint {
+            position: fixed;
+            top: 12px;
+            left: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            background-color: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            z-index: 999;
+            cursor: pointer;
+        }
     </style>
+    <div class="menu-hint">☰ Menu</div>
 """, unsafe_allow_html=True)
 
 # Load dataset
@@ -180,8 +196,8 @@ if st.button("Analyze Sentiment"):  # New Submit Button
         #results_df = pd.DataFrame(results)
         #st.write("### Sentiment Analysis Results")
         #st.dataframe(results_df)
-        # Add horizontal bar graph
     
+        # Add horizontal bar graph
     st.write("### Feedback Clustering")
     chart_data = pd.DataFrame({
         'Topic': ['Pricing', 'Usability', 'Support'],
