@@ -34,41 +34,7 @@ st.markdown("""
         .stButton button {
             text-align: left !important;
         }
-
-        /* Floating menu label */
-        .menu-hint {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            font-size: 14px;
-            font-weight: bold;
-            color: white;
-            background-color: #FF4B4B; /* Streamlit red */
-            padding: 5px 10px;
-            border-radius: 5px;
-            z-index: 999;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-
-        /* Hide label when sidebar is open */
-        [data-testid="stSidebar"][aria-expanded="true"] ~ .menu-hint {
-            opacity: 0;
-            pointer-events: none;
-        }
     </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var hint = document.createElement("div");
-            hint.innerText = "☰ Menu";
-            hint.className = "menu-hint";
-            hint.onclick = function() {
-                document.querySelector('button[kind="icon"]').click();
-            };
-            document.body.appendChild(hint);
-        });
-    </script>
 """, unsafe_allow_html=True)
 
 
