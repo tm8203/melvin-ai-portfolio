@@ -180,7 +180,7 @@ elif page == "nlp-customer-insights":
     st.altair_chart(bar_chart, use_container_width=True)
 
     # Add the guidance text back
-    st.write("Enter customer feedback, then click the **Analyze Sentiment** button for results:")
+    st.write("Enter your own sample customer feedback, then click the **Analyze Sentiment** button for results:")
 
     # Inject CSS to hide the "Press Ctrl+Enter to apply" hint
     st.markdown("""
