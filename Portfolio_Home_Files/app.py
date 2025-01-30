@@ -162,14 +162,26 @@ elif page == "nlp-customer-insights":
     st.title("Natural Language Processing (NLP) for Customer Insights")
     st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
     st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
+    
     user_feedbacks = st.text_area("Enter customer feedback (one per line):", height=150)
+
+if st.button("Analyze Sentiment"):  # New Submit Button
     if user_feedbacks:
         feedback_list = user_feedbacks.split("\n")
         results = [{"Feedback": feedback, "Sentiment": analyze_sentiment(feedback)} for feedback in feedback_list if feedback.strip()]
         results_df = pd.DataFrame(results)
         st.write("### Sentiment Analysis Results")
         st.dataframe(results_df)
+
+    #this version uses the default ctrl+enter to interact with the module creating a poor mobile user experience
+    #if user_feedbacks:
+        #feedback_list = user_feedbacks.split("\n")
+        #results = [{"Feedback": feedback, "Sentiment": analyze_sentiment(feedback)} for feedback in feedback_list if feedback.strip()]
+        #results_df = pd.DataFrame(results)
+        #st.write("### Sentiment Analysis Results")
+        #st.dataframe(results_df)
         # Add horizontal bar graph
+    
     st.write("### Feedback Clustering")
     chart_data = pd.DataFrame({
         'Topic': ['Pricing', 'Usability', 'Support'],
