@@ -180,7 +180,7 @@ elif page == "nlp-customer-insights":
     st.altair_chart(bar_chart, use_container_width=True)
 
     # User Input for Sentiment Analysis
-    user_feedbacks = st.text_area("Enter customer feedback (one per line):", height=150)
+    user_feedbacks = st.text_area("Enter customer feedback, then click the "Analyze Sentiment" button for results:", height=150)
 
     # Process sentiment analysis only when button is clicked
     if st.button("Analyze Sentiment"):
