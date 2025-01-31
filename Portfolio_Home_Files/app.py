@@ -321,15 +321,25 @@ elif page == "sound-analysis":
 #    st.write("[PAPER: Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Harnessing%20Tech%20Talent.%20MTejada.%204.13.24.pdf)")
 #    st.write("[DEMO: Employee Fraud Detection: A Deep Learning Model Harnessing Psychology Research to Detect Fraud - Coming Soon]()")
 
-elif page == "research-demos":
-    st.title("Here is a sample of some of my research combining Psychology and Technology (all received As).")
+#elif page == "research-demos":
+#    st.title("Here is a sample of some of my research combining Psychology and Technology (all received As).")
     
     # Use st.markdown to enable HTML rendering and underline only the titles
-    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Performance%20Mgmt.%20Org.%20Eff.%20and%20Disruptive%20Technology.%20MTejada%2012.04.23.pdf"><u>PAPER: Performance Management, Organizational Effectiveness, and Disruptive Technology</u></a></li></ul>', unsafe_allow_html=True)
-    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Technology%20and%20Trust%20in%20the%20Workplace.%20MTejada.%207.8.24.pdf"><u>PAPER: Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships</u></a></li></ul>', unsafe_allow_html=True)
-    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Trust%20and%20Technology%20Adoption.%20MTejada.%208.6.24.pdf"><u>PAPER: Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector</u></a></li></ul>', unsafe_allow_html=True)
-    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Harnessing%20Tech%20Talent.%20MTejada.%204.13.24.pdf"><u>PAPER: Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives</u></a></li></ul>', unsafe_allow_html=True)
-    st.markdown('<ul><li><a href="#"><u>DEMO: Employee Fraud Detection: A Deep Learning Model Harnessing Psychology Research to Detect Fraud - Coming Soon</u></a></li></ul>', unsafe_allow_html=True)
+#    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Performance%20Mgmt.%20Org.%20Eff.%20and%20Disruptive%20Technology.%20MTejada%2012.04.23.pdf"><u>PAPER: Performance Management, Organizational Effectiveness, and Disruptive Technology</u></a></li></ul>', unsafe_allow_html=True)
+#    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Technology%20and%20Trust%20in%20the%20Workplace.%20MTejada.%207.8.24.pdf"><u>PAPER: Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships</u></a></li></ul>', unsafe_allow_html=True)
+#    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Trust%20and%20Technology%20Adoption.%20MTejada.%208.6.24.pdf"><u>PAPER: Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector</u></a></li></ul>', unsafe_allow_html=True)
+#    st.markdown('<ul><li><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Harnessing%20Tech%20Talent.%20MTejada.%204.13.24.pdf"><u>PAPER: Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives</u></a></li></ul>', unsafe_allow_html=True)
+#    st.markdown('<ul><li><a href="#"><u>DEMO: Employee Fraud Detection: A Deep Learning Model Harnessing Psychology Research to Detect Fraud - Coming Soon</u></a></li></ul>', unsafe_allow_html=True)
+
+elif page == "research-demos":
+    st.title("Here is a sample of some of my research combining Psychology and Technology (all received As).")
+
+    # Underline only the titles, not the "PAPER" or "DEMO"
+    st.markdown('<p>PAPER: <u><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Performance%20Mgmt.%20Org.%20Eff.%20and%20Disruptive%20Technology.%20MTejada%2012.04.23.pdf">Performance Management, Organizational Effectiveness, and Disruptive Technology</a></u></p>', unsafe_allow_html=True)
+    st.markdown('<p>PAPER: <u><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Technology%20and%20Trust%20in%20the%20Workplace.%20MTejada.%207.8.24.pdf">Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships</a></u></p>', unsafe_allow_html=True)
+    st.markdown('<p>PAPER: <u><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Trust%20and%20Technology%20Adoption.%20MTejada.%208.6.24.pdf">Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector</a></u></p>', unsafe_allow_html=True)
+    st.markdown('<p>PAPER: <u><a href="https://github.com/tm8203/melvin-ai-portfolio/blob/main/Harnessing%20Tech%20Talent.%20MTejada.%204.13.24.pdf">Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives</a></u></p>', unsafe_allow_html=True)
+    st.markdown('<p>DEMO: <u><a href="#">Employee Fraud Detection: A Deep Learning Model Harnessing Psychology Research to Detect Fraud - Coming Soon</a></u></p>', unsafe_allow_html=True)
 
 
 # Ensure sidebar collapse logic applies correctly
