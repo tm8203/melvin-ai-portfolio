@@ -90,7 +90,7 @@ st.sidebar.button("First I Create Synthetic Data. Then...", on_click=navigate, a
 st.sidebar.button("[**interactive**] Use Scalar Regression to Forecast Spend", on_click=navigate, args=("scalar-regression",))
 st.sidebar.button("[**interactive**] Use a Variational Autoencoder (VAE) to Detect Anomalies", on_click=navigate, args=("vae-anomaly-detection",))
 st.sidebar.button("[**interactive**] Use Natural Language Processing (NLP) to Analyze Customer Insights", on_click=navigate, args=("nlp-customer-insights",))
-st.sidebar.markdown("## More Fun Generative AI and Deep Learning Samples")
+st.sidebar.markdown("## More Fun AI and Deep Learning Samples")
 st.sidebar.button("Create Your Own Picture Filter with Neural Style Transfer (NST)", on_click=navigate, args=("nst-filters",))
 st.sidebar.button("Detect Image Features with a Convolutional Neural Network (CNN)", on_click=navigate, args=("cnn-feature-detection",))
 st.sidebar.button("[**interactive**] Analyze Sound with Spectrogram Insights", on_click=navigate, args=("sound-analysis",))
