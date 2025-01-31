@@ -11,6 +11,23 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
+#google 15-30
+# ✅ Google Analytics Tracking ID
+GA_TRACKING_ID = "G-2MTDPRBPKT"
+
+# ✅ Google Analytics Injection Script
+GA_SCRIPT = f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+gtag('config', '{GA_TRACKING_ID}');
+</script>
+"""
+
+# ✅ Inject Google Analytics - Ensure it's right after `st.set_page_config()`
+components.html(GA_SCRIPT, height=0)
 
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
