@@ -314,7 +314,7 @@ elif page == "sound-analysis":
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/Sound)")
 
 elif page == "research-demos":
-    st.title("Here is a sample of some of my research combining Psychology and Technology (all recieved A grades.")
+    st.title("Here is a sample of some of my research combining Psychology and Technology (all recieved As).")
     st.write("[PAPER: Performance Management, Organizational Effectiveness, and Disruptive Technology](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Performance%20Mgmt.%20Org.%20Eff.%20and%20Disruptive%20Technology.%20MTejada%2012.04.23.pdf)")
     st.write("[PAPER: Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Technology%20and%20Trust%20in%20the%20Workplace.%20MTejada.%207.8.24.pdf)")
     st.write("[PAPER: Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Trust%20and%20Technology%20Adoption.%20MTejada.%208.6.24.pdf)")
