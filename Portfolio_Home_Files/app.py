@@ -94,6 +94,9 @@ st.sidebar.markdown("## More Fun Generative AI and Deep Learning Samples")
 st.sidebar.button("Create Your Own Picture Filter with Neural Style Transfer (NST)", on_click=navigate, args=("nst-filters",))
 st.sidebar.button("Detect Image Features with a Convolutional Neural Network (CNN)", on_click=navigate, args=("cnn-feature-detection",))
 st.sidebar.button("[**interactive**] Analyze Sound with Spectrogram Insights", on_click=navigate, args=("sound-analysis",))
+st.sidebar.markdown("## Research and Demos")
+st.sidebar.button("Psychology + Technology Research", on_click=navigate, args=("research-demos",))
+
 
 # Display relevant section
 page = st.session_state.page
@@ -311,6 +314,13 @@ elif page == "sound-analysis":
 
     # Add a link to GitHub for the code
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/Sound)")
+
+elif page == "research-demos":
+    st.title("If you're interested in some "light" reading, here are a few of my literature reviews and research papers (all earning an A grade)")
+    st.write("[Performance Management, Organizational Effectiveness, and Disruptive Technology"]()")
+    st.write("[Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships]()")
+    st.write("[Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector]()")
+    st.write("[Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives]()")
 
 # Ensure sidebar collapse logic applies correctly
 if st.session_state.get("force_refresh", False):
