@@ -109,8 +109,8 @@ if page == "about-me":
     # Display your blurb in the second column
     with col2:
         st.markdown("""
-            Welcome to my AI portfolio! I'm **Melvin Tejada**, an experienced professional with a passion for leading in technical product management, 
-            program management, and advanced analytics. I focus on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
+            Welcome to my AI portfolio! I'm **Melvin Tejada**. I recently spent a year sharpening my skills at the intersection of psychology - specifically technical teams and their motivation and performance; technology - specifically artificial intelligence and deep learning, and product management - which ties them all together as it's own version of the scientific method where hypotheses lead to feature improvements! I'm now ready for next gig where I hope to lead in a technical product management, 
+            program management, or analytics role. I focus on delivering innovative solutions that bridge cutting-edge AI with impactful business outcomes.  
             
             Explore this portfolio (starting with the ">"/menu symbol in the upper left corner) to see a small sample of my work with data and AI/ML/DL.
             
