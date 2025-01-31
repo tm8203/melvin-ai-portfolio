@@ -24,11 +24,7 @@ st.set_page_config(
 # JavaScript injection inside an iframe for better execution
 GA_TRACKING_ID = "G-2MTDPRBPKT"
 
-# inject Google Analytics using an iframe
 GA_SCRIPT = f"""
-<iframe height="0" width="0" style="display:none;visibility:hidden" 
-src="https://www.googletagmanager.com/ns.html?id={GA_TRACKING_ID}"></iframe>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -38,7 +34,7 @@ gtag('config', '{GA_TRACKING_ID}');
 </script>
 """
 
-# Embed JavaScript in an HTML component for proper execution
+# Inject script properly (no height required)
 components.html(GA_SCRIPT, height=0)
 
 # Inject custom CSS
