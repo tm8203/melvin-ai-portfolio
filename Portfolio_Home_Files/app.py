@@ -216,6 +216,7 @@ elif page == "nlp-customer-insights":
             st.dataframe(results_df)
         else:
             st.warning("Please enter some text before clicking 'Analyze Sentiment'.")
+    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Portfolio_Home_Files/app.py)") # Add a link to GitHub for the code
 
 
 
