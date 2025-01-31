@@ -6,11 +6,24 @@ from textblob import TextBlob
 import os
 import streamlit.components.v1 as components
 
+if "sidebar_state" not in st.session_state:
+    st.session_state.sidebar_state = "collapsed"  # Default state
+
+if "allow_sidebar_open" not in st.session_state:
+    st.session_state.allow_sidebar_open = True  # Track manual sidebar opening
+
+# Set initial sidebar state based on allow_sidebar_open
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
+
+#st.set_page_config(
+#    page_title="Melvin Tejada's AI Portfolio",
+#    layout="wide",
+#    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
+#)
 
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
