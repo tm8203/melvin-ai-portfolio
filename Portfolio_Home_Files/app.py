@@ -170,7 +170,6 @@ elif page == "nlp-customer-insights":
     st.title("Natural Language Processing (NLP) for Customer Insights")
     st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
     st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
-    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/NLP/NLP_e89-Melvin-Tejada-HW8.ipynb)") # Add a link to GitHub for the code
 
     # Always Visible: Feedback Clustering Visualization
     st.write("### Feedback Clustering")
@@ -215,7 +214,7 @@ elif page == "nlp-customer-insights":
             st.dataframe(results_df)
         else:
             st.warning("Please enter some text before clicking 'Analyze Sentiment'.")
-    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Portfolio_Home_Files/app.py)") # Add a link to GitHub for the code
+    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/NLP/NLP_e89-Melvin-Tejada-HW8.ipynb)") # Add a link to GitHub for the code
 
 
 
