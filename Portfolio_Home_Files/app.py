@@ -6,32 +6,11 @@ from textblob import TextBlob
 import os
 import streamlit.components.v1 as components
 
-# Initialize session state **before** calling `st.set_page_config`
-if "allow_sidebar_open" not in st.session_state:
-    st.session_state.allow_sidebar_open = True  # Default behavior
-    
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
-
-# Google Analytics Tracking ID
-GA_TRACKING_ID = "G-2MTDPRBPKT"
-
-# Google Analytics Injection Script (Persistent)
-GA_SCRIPT = f"""
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-gtag('config', '{GA_TRACKING_ID}');
-</script>
-"""
-
-# Inject Google Analytics using `st.components.v1.html()`
-components.html(GA_SCRIPT, height=0)
 
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
