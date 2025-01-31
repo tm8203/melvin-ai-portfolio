@@ -13,6 +13,21 @@ if "sidebar_state" not in st.session_state:
     st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
     st.session_state.allow_sidebar_open = True  # Track manual sidebar opening
 
+# Google Analytics Tracking Code
+GA_TRACKING_ID = "G-2MTDPRBPKT"  # Replace with your actual ID
+
+GA_SCRIPT = f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+gtag('config', '{GA_TRACKING_ID}');
+</script>
+"""
+
+# Inject Google Analytics script
+st.markdown(f"<head>{GA_SCRIPT}</head>", unsafe_allow_html=True)
 
 # Page configuration
 #st.set_page_config(
