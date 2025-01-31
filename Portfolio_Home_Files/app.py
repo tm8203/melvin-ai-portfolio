@@ -6,11 +6,10 @@ from textblob import TextBlob
 import os
 import streamlit.components.v1 as components
 
-# Set Streamlit Page Config (AFTER injecting GA)
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
 
 # Google Analytics Tracking ID
@@ -37,12 +36,6 @@ components.html(GA_SCRIPT, height=0)
 if "sidebar_state" not in st.session_state:
     st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
     st.session_state.allow_sidebar_open = True  # Track manual sidebar opening
-
-st.set_page_config(
-    page_title="Melvin Tejada's AI Portfolio",
-    layout="wide",
-    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
-)
 
 # Inject custom CSS
 st.markdown("""
