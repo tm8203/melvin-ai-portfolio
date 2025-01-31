@@ -1,0 +1,1 @@
+web: python add_ga.py && streamlit run Portfolio_Home_Files/app.py
