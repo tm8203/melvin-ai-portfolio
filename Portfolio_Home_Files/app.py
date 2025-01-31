@@ -317,9 +317,9 @@ elif page == "sound-analysis":
 
 elif page == "research-demos":
     st.title("If you're interested in some light reading, here are a few of my literature reviews and research papers (all earning an A grade)")
-    st.write("[PAPER: Performance Management, Organizational Effectiveness, and Disruptive Technology]()")
-    st.write("[PAPER: Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships]()")
-    st.write("[PAPER: Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector]()")
+    st.write("[PAPER: Performance Management, Organizational Effectiveness, and Disruptive Technology](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Performance%20Mgmt.%20Org.%20Eff.%20and%20Disruptive%20Technology.%20MTejada%2012.04.23.pdf)")
+    st.write("[PAPER: Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Technology%20and%20Trust%20in%20the%20Workplace.%20MTejada.%207.8.24.pdf)")
+    st.write("[PAPER: Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Trust%20and%20Technology%20Adoption.%20MTejada.%208.6.24.pdf)")
     st.write("[PAPER: Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Harnessing%20Tech%20Talent.%20MTejada.%204.13.24.pdf)")
     st.write("[DEMO: Employee Fraud Detection: A Deep Learning Model Harnessing Psychology Research to Detect Fraud - Coming Soon]()")
 
