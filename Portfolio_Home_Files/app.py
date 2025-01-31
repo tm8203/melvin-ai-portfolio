@@ -38,11 +38,11 @@ f.parentNode.insertBefore(j,f);}})(window,document,'script','dataLayer','{GTM_ID
 
 components.html(GTM_SCRIPT, height=0)  # ✅ Inject GTM Script
 
-st.set_page_config(
-    page_title="Melvin Tejada's AI Portfolio",
-    layout="wide",
-    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
-)
+#st.set_page_config(
+ #   page_title="Melvin Tejada's AI Portfolio",
+  #  layout="wide",
+   # initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
+#)
 
 # Google Tag Manager ID
 GTM_ID = "GT-NSSZSDW8"
