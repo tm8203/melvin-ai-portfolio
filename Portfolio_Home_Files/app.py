@@ -6,6 +6,13 @@ from textblob import TextBlob
 import os
 import streamlit.components.v1 as components
 
+# Set Streamlit Page Config (AFTER injecting GA)
+st.set_page_config(
+    page_title="Melvin Tejada's AI Portfolio",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 # Google Analytics Tracking ID
 GA_TRACKING_ID = "G-2MTDPRBPKT"
 
@@ -22,13 +29,6 @@ gtag('config', '{GA_TRACKING_ID}');
 
 # Inject Google Analytics using `st.components.v1.html()`
 components.html(GA_SCRIPT, height=0)
-
-# Set Streamlit Page Config (AFTER injecting GA)
-st.set_page_config(
-    page_title="Melvin Tejada's AI Portfolio",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
 
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
