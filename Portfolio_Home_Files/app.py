@@ -11,6 +11,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
+
 #google 15-30
 # ✅ Google Analytics Tracking ID
 GA_TRACKING_ID = "G-2MTDPRBPKT"
