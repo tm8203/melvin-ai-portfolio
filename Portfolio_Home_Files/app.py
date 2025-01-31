@@ -19,8 +19,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
 
-# Google Analytics Tracking Code
-GA_TRACKING_ID = "G-2MTDPRBPKT"  # Replace with your actual ID
+# Google Analytics Tracking ID
+GA_TRACKING_ID = "G-2MTDPRBPKT"
 
 GA_SCRIPT = f"""
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
@@ -32,8 +32,8 @@ gtag('config', '{GA_TRACKING_ID}');
 </script>
 """
 
-# Inject Google Analytics script
-st.markdown(f"<head>{GA_SCRIPT}</head>", unsafe_allow_html=True)
+# Inject Google Analytics into the Streamlit app
+st.markdown(GA_SCRIPT, unsafe_allow_html=True)
 
 # Page configuration
 #st.set_page_config(
