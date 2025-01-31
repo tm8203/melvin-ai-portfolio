@@ -21,9 +21,10 @@ st.set_page_config(
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
 
-# JavaScript injection inside an iframe for better execution
+# Google Analytics Tracking ID
 GA_TRACKING_ID = "G-2MTDPRBPKT"
 
+# Correct way to inject Google Analytics in Streamlit
 GA_SCRIPT = f"""
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
 <script>
@@ -34,8 +35,8 @@ gtag('config', '{GA_TRACKING_ID}');
 </script>
 """
 
-# Inject script properly (no height required)
-components.html(GA_SCRIPT, height=0)
+# Embed the script in a small, hidden Streamlit component (ensures execution)
+components.html(GA_SCRIPT, height=0, scrolling=False)
 
 # Inject custom CSS
 st.markdown("""
