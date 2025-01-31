@@ -6,6 +6,10 @@ from textblob import TextBlob
 import os
 import streamlit.components.v1 as components
 
+# Initialize session state **before** calling `st.set_page_config`
+if "allow_sidebar_open" not in st.session_state:
+    st.session_state.allow_sidebar_open = True  # Default behavior
+    
 st.set_page_config(
     page_title="Melvin Tejada's AI Portfolio",
     layout="wide",
