@@ -320,7 +320,7 @@ elif page == "research-demos":
     st.write("[PAPER: Performance Management, Organizational Effectiveness, and Disruptive Technology]()")
     st.write("[PAPER: Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships]()")
     st.write("[PAPER: Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector]()")
-    st.write("[PAPER: Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives]()")
+    st.write("[PAPER: Harnessing Tech Talent: The Science Behind Selecting Top Software Sales Representatives](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Harnessing%20Tech%20Talent.%20MTejada.%204.13.24.pdf)")
     st.write("[DEMO: Employee Fraud Detection: A Deep Learning Model Harnessing Psychology Research to Detect Fraud - Coming Soon]()")
 
 
