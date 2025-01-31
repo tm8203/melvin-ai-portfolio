@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import altair as alt
 from textblob import TextBlob
 import os
+import streamlit.components.v1 as components
+
 
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
