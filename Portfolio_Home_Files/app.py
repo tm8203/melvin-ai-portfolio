@@ -13,6 +13,12 @@ if "sidebar_state" not in st.session_state:
     st.session_state.sidebar_state = "collapsed"  # Start collapsed on first load
     st.session_state.allow_sidebar_open = True  # Track manual sidebar opening
 
+st.set_page_config(
+    page_title="Melvin Tejada's AI Portfolio",
+    layout="wide",
+    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
+)
+
 # Google Analytics Tracking Code
 GA_TRACKING_ID = "G-2MTDPRBPKT"  # Replace with your actual ID
 
@@ -35,12 +41,6 @@ st.markdown(f"<head>{GA_SCRIPT}</head>", unsafe_allow_html=True)
     #layout="wide",
     #initial_sidebar_state=st.session_state.sidebar_state  # Use session state to track sidebar behavior
 #)
-
-st.set_page_config(
-    page_title="Melvin Tejada's AI Portfolio",
-    layout="wide",
-    initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
-)
 
 # Inject custom CSS
 st.markdown("""
