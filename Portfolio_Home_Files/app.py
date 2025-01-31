@@ -22,22 +22,22 @@ st.set_page_config(
 # JavaScript injection inside an iframe for better execution
 GA_TRACKING_ID = "G-2MTDPRBPKT"
 
+# inject Google Analytics using an iframe
 GA_SCRIPT = f"""
-<iframe height="0" width="0" style="display:none;visibility:hidden" src="https://www.googletagmanager.com/ns.html?id={GA_TRACKING_ID}"></iframe>
+<iframe height="0" width="0" style="display:none;visibility:hidden" 
+src="https://www.googletagmanager.com/ns.html?id={GA_TRACKING_ID}"></iframe>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){{dataLayer.push(arguments);}}
 gtag('js', new Date());
-gtag('config', '{GA_TRACKING_ID}', {{
-  'send_page_view': true
-}});
+gtag('config', '{GA_TRACKING_ID}');
 </script>
 """
 
-# Inject JavaScript correctly in Streamlit
-st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+# Embed JavaScript in an HTML component for proper execution
+components.html(GA_SCRIPT, height=0)
 
 # Inject custom CSS
 st.markdown("""
