@@ -125,7 +125,7 @@ if page == "about-me":
             
             **_Pro Tip: this portfolio pairs well with a sense of curiosity_** :)
             
-            My portfolio is split into two sections:  
+            Portfolio sections:  
             - 1. A scenario analyzing cloud spend with a series of **interactive** AI models (~ one minute or less each)  
             - 2. More **interactive**  models that create image filters, detect images, and analyze sound visuaully (also each a minute or less)!
             - 3. Research Papers and Demos
