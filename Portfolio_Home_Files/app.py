@@ -153,7 +153,7 @@ elif page == "scalar-regression":
     ax.set_xlabel("Month")
     ax.set_ylabel("Projected Spend ($)")
     st.pyplot(fig)
-    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Portfolio_Home_Files/app.py)") # Add a link to GitHub for the code
+    st.write("[View Full Code on GitHub - notebook coming soon]") # Add a link to GitHub for the code
 
 elif page == "vae-anomaly-detection":
     st.title("Variational Autoencoder (VAE) for Anomaly Detection")
@@ -164,14 +164,13 @@ elif page == "vae-anomaly-detection":
     anomalies = data[data["Monthly_Cloud_Spend"] > threshold]
     st.write(f"Detected {len(anomalies)} anomalies (Spend > ${threshold:,.2f}).")
     st.dataframe(anomalies)
-    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Portfolio_Home_Files/app.py)") # Add a link to GitHub for the code
-
-
+    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/VAE/VAE_e89_Melvin_Tejada_HW7.ipynb)") # Add a link to GitHub for the code
+    
 elif page == "nlp-customer-insights":
     st.title("Natural Language Processing (NLP) for Customer Insights")
     st.write("**Opportunity:** Extract themes and sentiments from customer feedback to improve product features and services.")
     st.write("**AI Solution:** I developed and trained an NLP model to offer text classification, sentiment analysis, and clustering.")
-    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/Portfolio_Home_Files/app.py)") # Add a link to GitHub for the code
+    st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/blob/main/NLP/NLP_e89-Melvin-Tejada-HW8.ipynb)") # Add a link to GitHub for the code
 
     # Always Visible: Feedback Clustering Visualization
     st.write("### Feedback Clustering")
