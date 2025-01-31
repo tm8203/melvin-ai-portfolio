@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # Google Tag Manager ID
-GTM_ID = "GT-NSSZSDW8"  # Replace this with your GTM ID
+GTM_ID = "GT-NSSZSDW8"
 
 # Google Tag Manager Script
 GTM_SCRIPT = f"""
