@@ -129,6 +129,7 @@ if page == "about-me":
             - 1. A scenario analyzing cloud spend with a series of **interactive** AI models (~ one minute or less each)  
             - 2. More **interactive**  models that create image filters, detect images, and analyze sound visuaully (also each a minute or less)!
             - 3. Research Papers and Demos
+            
             Have fun!
             
             Feel free to connect via LinkedIn (link below) or email me at **tejada.melvin@gmail.com**. 
