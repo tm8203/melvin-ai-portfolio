@@ -4,4 +4,3 @@ matplotlib
 altair
 textblob
 scipy
-python add_ga.py
