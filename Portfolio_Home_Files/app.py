@@ -6,6 +6,29 @@ from textblob import TextBlob
 import os
 import streamlit.components.v1 as components
 
+# Google Analytics Tracking ID
+GA_TRACKING_ID = "G-2MTDPRBPKT"
+
+# Google Analytics Injection Script (Persistent)
+GA_SCRIPT = f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){{dataLayer.push(arguments);}}
+gtag('js', new Date());
+gtag('config', '{GA_TRACKING_ID}');
+</script>
+"""
+
+# Inject Google Analytics using `st.components.v1.html()`
+components.html(GA_SCRIPT, height=0)
+
+# Set Streamlit Page Config (AFTER injecting GA)
+st.set_page_config(
+    page_title="Melvin Tejada's AI Portfolio",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
@@ -20,23 +43,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
-
-# Google Analytics Tracking ID
-GA_TRACKING_ID = "G-2MTDPRBPKT"
-
-# Correct way to inject Google Analytics in Streamlit
-GA_SCRIPT = f"""
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_TRACKING_ID}"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){{dataLayer.push(arguments);}}
-gtag('js', new Date());
-gtag('config', '{GA_TRACKING_ID}');
-</script>
-"""
-
-# Embed the script in a small, hidden Streamlit component (ensures execution)
-components.html(GA_SCRIPT, height=0, scrolling=False)
 
 # Inject custom CSS
 st.markdown("""
