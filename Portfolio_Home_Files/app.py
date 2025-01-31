@@ -12,6 +12,22 @@ st.set_page_config(
     initial_sidebar_state="collapsed" if st.session_state.allow_sidebar_open else "expanded"
 )
 
+# ✅ Google Tag Manager ID
+GTM_ID = "GT-NSSZSDW8"  # Replace this with your GTM ID
+
+# ✅ Google Tag Manager Script
+GTM_SCRIPT = f"""
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start': new Date().getTime(), event:'gtm.js'}});
+var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);}})(window,document,'script','dataLayer','{GTM_ID}');</script>
+<!-- End Google Tag Manager -->
+"""
+
+# ✅ Inject Google Tag Manager - Ensure it's right after `st.set_page_config()`
+components.html(GTM_SCRIPT, height=0)
+
 # Initialize sidebar state
 #if "sidebar_state" not in st.session_state:
     #st.session_state.sidebar_state = "collapsed"  # Default state
