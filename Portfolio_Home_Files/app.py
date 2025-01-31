@@ -316,7 +316,7 @@ elif page == "sound-analysis":
     st.write("[View Full Code on GitHub](https://github.com/tm8203/melvin-ai-portfolio/tree/main/Sound)")
 
 elif page == "research-demos":
-    st.title("If you're interested in some "light" reading, here are a few of my literature reviews and research papers (all earning an A grade)")
+    st.title("If you're interested in some light reading, here are a few of my literature reviews and research papers (all earning an A grade)")
     st.write("[Performance Management, Organizational Effectiveness, and Disruptive Technology]()")
     st.write("[Technology and Trust in the Workplace: A literature Review on the Benefits and Challenges on Workplace Relationships]()")
     st.write("[Trust and Technology Adoption: How Relationships Influence IT Adoption in the Public Sector]()")
