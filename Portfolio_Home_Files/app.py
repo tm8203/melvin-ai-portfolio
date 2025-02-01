@@ -161,7 +161,7 @@ elif page == "scalar-regression":
     ax.set_xlabel("Month")
     ax.set_ylabel("Projected Spend ($)")
     st.pyplot(fig)
-    st.write("[View Full Code on GitHub - notebook coming soon]") # Add a link to GitHub for the code
+    st.write("[View Full Code on GitHub - updated notebook coming soon; all others on avail. on github]") # Add a link to GitHub for the code
 
 elif page == "vae-anomaly-detection":
     st.title("Variational Autoencoder (VAE) for Anomaly Detection")
